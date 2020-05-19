@@ -1,10 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import Login from './login';
+import { Router } from "@reach/router";
 
 const IndexPage = () => (
   <div>
-    <Login/>
+    <Router>
+      <Login path="/"/>
+    </Router>
+   
   </div>
 )
 

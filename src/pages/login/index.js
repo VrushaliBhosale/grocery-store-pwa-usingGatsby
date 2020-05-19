@@ -8,9 +8,11 @@ const Login = () => (
     <div className="wrapper">
       <TextField id="standard-basic" label="First Name" />
       <TextField id="standard-basic" label="Last Name" />
-      <Button variant="contained" color="primary">
-        Submit
-      </Button>
+      <Link to=''>
+        <Button variant="contained" color="primary">
+          Submit
+        </Button>
+      </Link>
     </div>
 )
 
