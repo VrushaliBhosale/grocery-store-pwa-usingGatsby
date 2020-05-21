@@ -28,21 +28,21 @@ module.exports = {
         icon: `${__dirname}/src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        workboxConfig: {
-          importWorkboxFrom: `cdn`,
-        },
-        appendScript: require.resolve(`${__dirname}/src/custom-sw-code.js`),
-      }
-    },
     // {
-    //   resolve: 'gatsby-plugin-sw',
+    //   resolve: `gatsby-plugin-offline`,
     //   options: {
-    //     swPath: 'src/utils/my-service-worker.js', // Default to 'src/sw.js'
-    //   },
+    //     workboxConfig: {
+    //       importWorkboxFrom: `cdn`,
+    //     },
+    //     appendScript: require.resolve(`${__dirname}/src/custom-sw-code.js`),
+    //   }
     // },
+    {
+      resolve: 'gatsby-plugin-sw',
+      options: {
+        // swPath: 'src/utils/my-service-worker.js', // Default to 'src/sw.js'
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
