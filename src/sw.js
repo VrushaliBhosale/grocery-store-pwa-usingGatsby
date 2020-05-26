@@ -25,3 +25,14 @@ self.addEventListener('push', function (e) {
         self.registration.showNotification('Hello world!', options)
     );
 });
+
+function openPushNotification(event) {
+    console.log("[Service Worker] Notification click Received.", event.notification.data);
+    
+    event.notification.close();
+    event.waitUntil(clients.openWindow(event.notification.data));
+  }
+  
+  self.addEventListener("notificationclick", function(){
+    console.log("clikced on notifcations....")
+  });
